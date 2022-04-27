@@ -42,22 +42,26 @@ body {
     padding: 0 24px;
   }
   @include breakpoint-up(small) {
-    max-width: 35rem;
+    max-width: 40rem;
+    width: 90vw;
     margin: 0 auto;
     padding: 0 24px;
   }
   @include breakpoint-up(medium) {
-    max-width: 47rem;
+    max-width: 54rem;
+    width: 90vw;
     margin: 0 auto;
     padding: 0 24px;
   }
   @include breakpoint-up(large) {
-    max-width: 61rem;
+    max-width: 68rem;
+    width: 90vw;
     margin: 0 auto;
     padding: 0 24px;
   }
   @include breakpoint-up(xlarge) {
-    max-width: 74rem;
+    max-width: 76rem;
+    width: 90vw;
     margin: 0 auto;
     padding: 0 24px;
   }
