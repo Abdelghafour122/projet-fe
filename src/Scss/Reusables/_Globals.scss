@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.df {
+  display: flex;
+  &.jc-sb {
+    justify-content: space-between;
+  }
+  &.jc-c {
+    justify-content: center;
+  }
+  &.jc-sa {
+    justify-content: space-around;
+  }
+  &.jc-fs {
+    justify-content: flex-start;
+  }
+  &.jc-fe {
+    justify-content: flex-end;
+  }
+  &.ai-c {
+    align-items: center;
+  }
+  &.fd-c {
+    flex-direction: column;
+  }
+}
+
+.container {
+  @include breakpoint-down(small) {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @include breakpoint-up(small) {
+    max-width: 35rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @include breakpoint-up(medium) {
+    max-width: 47rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @include breakpoint-up(large) {
+    max-width: 61rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @include breakpoint-up(xlarge) {
+    max-width: 74rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+.hide-in-desktop {
+  @include breakpoint-up(small) {
+    display: none;
+  }
+}
+
+.hide-in-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

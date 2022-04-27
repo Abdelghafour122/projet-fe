@@ -1,1 +1,5 @@
-@import "./Pages/_Navbar.scss";
+// @import "./Reusables/Mixins";
+@import "./Reusables/Breakpoints";
+@import "./Reusables/Globals";
+@import "./Reusables/Animations";
+@import "./Pages/Home/Navbar";

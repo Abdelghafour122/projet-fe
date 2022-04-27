@@ -1,5 +1,195 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.df {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.df.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.df.jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.df.jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.df.jc-fs {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.df.jc-fe {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.df.ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.df.fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 35.9375rem) {
+  .container {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 36rem) {
+  .container {
+    max-width: 35rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 48rem) {
+  .container {
+    max-width: 47rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 62rem) {
+  .container {
+    max-width: 61rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: 74rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 36rem) {
+  .hide-in-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .hide-in-mobile {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 0.3s ease-in-out forwards;
+          animation: fade-out 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 0.3s ease-in-out forwards;
+          animation: fade-in 0.3s ease-in-out forwards;
+}
+
 nav {
-  color: blue;
-  font-family: "Poppins";
+  font-family: "Libre Bodoni";
 }
 /*# sourceMappingURL=App.css.map */
