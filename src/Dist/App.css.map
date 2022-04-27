@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,SAAS;CACvB",
+    "sources": [
+        "../Scss/App.scss",
+        "../Scss/Pages/_Navbar.scss"
+    ],
+    "names": [],
+    "file": "App.css"
+}
