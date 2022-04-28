@@ -4,3 +4,8 @@ components holds all reuseable components
 
 pages holds all big sections of scss
 each page has sub elements
+
+
+
+NOTES:
+use typography for texts
