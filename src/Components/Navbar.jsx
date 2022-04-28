@@ -10,7 +10,8 @@ import {
 import { Settings } from "@mui/icons-material";
 import { Box } from "@mui/system";
 import { Zoom } from "@mui/material";
-import theme from "../styles";
+import lightTheme from "../lightThemeStyle";
+import darkTheme from "../darkThemeStyle";
 
 const Navbar = () => {
   const [settingsDrawer, setSettingsDrawer] = useState({ right: false });
@@ -18,8 +19,9 @@ const Navbar = () => {
     setSettingsDrawer({ right: open });
   };
   return (
-    <ThemeProvider theme={theme}>
-      <nav>
+    // make a ternary for themes, use usememo, see device preferences too
+    <ThemeProvider theme={lightTheme}>
+      <Box component="nav" bgcolor="custom.mainBgColor">
         <section className="container df ai-c jc-sb">
           <img className="logo" src={logo} alt="Medical logo" />
           <ul className="desktop-links-list hide-in-mobile df ai-c jc-c">
@@ -57,7 +59,6 @@ const Navbar = () => {
               >
                 <Box
                   sx={{
-                    bgcolor: "hsl(196, 81%, 29%)",
                     width: "300px",
                     height: "100%",
                     color: "white",
@@ -69,8 +70,11 @@ const Navbar = () => {
             </div>
           </div>
         </section>
-      </nav>
-      <Typography variant="h1" color="text.primary">
+      </Box>
+      <Typography variant="h1" color="custom.headingColor">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </Typography>
+      {/* <Typography variant="h1" color="text.primary">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
       </Typography>
       <Typography variant="h1" color="text.primary">
@@ -81,6 +85,24 @@ const Navbar = () => {
       </Typography>
       <Typography variant="h1" color="text.primary">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </Typography>
+      <Typography variant="h1" color="text.primary">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </Typography>
+      <Typography variant="h1" color="text.primary">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </Typography> */}
+      <Typography component="p" variant="p">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam
+        tempore labore sed illo blanditiis eligendi animi ipsam nihil eum
+        temporibus consequatur culpa quo, neque repellendus dolore officia
+        suscipit quod! Et officiis molestiae quo, aliquid incidunt quod quos
+        ratione necessitatibus quis quasi facilis, earum praesentium? Tenetur
+        non accusantium veritatis similique nisi praesentium, quasi a quae dolor
+        porro sit distinctio in! Debitis itaque suscipit quidem cupiditate?
+        Recusandae alias natus eos, possimus voluptatum ducimus suscipit autem
+        quae sint expedita perspiciatis accusantium laudantium repellat
+        laboriosam placeat dolorum nesciunt ex pariatur rem sit ab!
       </Typography>
     </ThemeProvider>
   );
