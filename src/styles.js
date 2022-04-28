@@ -1,6 +1,9 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  palette: {
+    mode: "light",
+  },
   typography: {
     fontFamily: " Poppins",
     body1: {
@@ -9,7 +12,7 @@ const theme = createTheme({
     },
     h1: {
       fontFamily: "Libre Bodoni",
-      //   fontSize: "30px",
+      fontSize: "50px",
     },
   },
 });

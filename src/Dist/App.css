@@ -9,6 +9,7 @@ html {
 
 body {
   margin: 0;
+  height: 3000px;
 }
 
 .df {
@@ -194,6 +195,35 @@ body {
 }
 
 nav {
-  font-family: "Libre Bodoni";
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid lightgray;
+  background-color: rgba(255, 255, 255, 0.94);
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: #2069b1;
+}
+
+nav ul li:not(:last-of-type) {
+  margin-right: 30px;
 }
 /*# sourceMappingURL=App.css.map */

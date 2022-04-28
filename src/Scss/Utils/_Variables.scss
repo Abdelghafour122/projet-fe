@@ -7,6 +7,14 @@ $warning: hsl(30, 100%, 48%);
 $success: hsl(123, 43%, 39%);
 
 $dmode-bc-c: hsl(211, 61%, 10%);
+$dmode-bc-c-t: hsl(210, 100%, 12%);
+
 $lmode-bc-c: hsl(0, 0%, 100%);
-$lmode-text: #fff;
-$dmode-text: #0a1929;
+$lmode-bc-c-t: hsl(210, 33%, 96%);
+
+$dmode-text: #fff;
+$lmode-text: hsl(211, 61%, 10%);
+
+$reg-fs: 16px;
+$big-header-fs: 30px;
+$small-head-fs: 25px;
