@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 import image2 from "../Assets/Pictures/background2.jpg";
@@ -12,11 +13,17 @@ const IMG_ARR = [image2, image3, image4, image5, image6, image7, image8];
 
 const HomePage = () => {
   return (
-    <section className="homepage">
+    <Box
+      component="section"
+      bgcolor="custom.secondBgColor"
+      className="homepage"
+    >
       <div className="container">
-        <h1>This is the homePage</h1>
+        <Typography component="h1" variant="h1" color="text.primary">
+          This is the homePage
+        </Typography>
       </div>
-    </section>
+    </Box>
   );
 };
 

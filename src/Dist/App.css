@@ -12,6 +12,10 @@ body {
   height: 3000px;
 }
 
+.App {
+  padding-top: 5.625rem;
+}
+
 .df {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,28 +205,43 @@ nav {
   padding: 10px 0;
   width: 100%;
   height: auto;
-  border-bottom: 1px solid lightgray;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   font-family: "Poppins";
   font-weight: 500;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@media (max-width: 35.9375rem) {
+  nav .controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 15px;
+  }
 }
 
-nav ul li {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer;
+nav .MuiTabs-flexContainer {
+  gap: 20px;
 }
 
-nav ul li:hover {
-  color: #2069b1;
+@media (max-width: 47.9375rem) {
+  nav .MuiTabs-flexContainer {
+    gap: 0;
+  }
 }
 
-nav ul li:not(:last-of-type) {
-  margin-right: 30px;
+nav .MuiTabs-flexContainer button {
+  font-size: 1rem;
+}
+
+@media (max-width: 47.9375rem) {
+  nav .MuiTabs-flexContainer button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+nav .MuiTabs-indicator {
+  border-radius: 10px;
 }
 /*# sourceMappingURL=App.css.map */

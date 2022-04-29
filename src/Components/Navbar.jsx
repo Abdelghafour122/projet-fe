@@ -6,33 +6,29 @@ import {
   Tooltip,
   Typography,
   Divider,
+  Tab,
+  Tabs,
 } from "@mui/material";
-import {
-  Settings,
-  Clear,
-  LightMode,
-  DarkMode,
-  DisplaySettings,
-} from "@mui/icons-material";
+import { Settings, Clear, Menu } from "@mui/icons-material";
 import { Box } from "@mui/system";
-import {
-  Zoom,
-  ToggleButton,
-  ToggleButtonGroup,
-  ListItemText,
-  ListItemButton,
-  List,
-} from "@mui/material";
+import { Zoom } from "@mui/material";
+import SettingsDrawer from "./Drawers/SettingsDrawer";
 
 const Navbar = ({ onSetChoice, onChoice }) => {
   const [settingsDrawer, setSettingsDrawer] = useState({ right: false });
-  // const [choice, setChoice] = useState("System");
-  // const [language, setLanguage] = useState("English");
+  const [mobLinksDrawer, setMobLinksDrawer] = useState({ right: false });
   const [langIndex, setLangIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(0);
 
-  const handleLanguageChange = (newLanguage, index) => {
-    // console.log(newLanguage.target.textContent);
-    // setLanguage()
+  const toggleSettingsDrawer = (open) => {
+    setSettingsDrawer({ right: open });
+  };
+
+  const toggleLinksDrawer = (openL) => {
+    setMobLinksDrawer({ right: openL });
+  };
+
+  const handleLanguageChange = (index) => {
     setLangIndex(index);
   };
 
@@ -40,45 +36,38 @@ const Navbar = ({ onSetChoice, onChoice }) => {
     onSetChoice(newChoice.currentTarget.value);
   };
 
-  const toggleSettingsDrawer = (open) => {
-    setSettingsDrawer({ right: open });
+  const handleChangeTabs = (e, newIndex) => {
+    setTabIndex(newIndex);
   };
   return (
-    // make a ternary for themes, use usememo, see device preferences too
     <Box component="nav" bgcolor="custom.navbarBgColor">
       <section className="container df ai-c jc-sb">
         <img className="logo" src={logo} alt="Medical logo" />
-        <ul className="desktop-links-list hide-in-mobile df ai-c jc-c">
-          <li>Home</li>
-          <li>About</li>
-          <li>Product</li>
-          <li>Contact</li>
-        </ul>
+        <Box className="hide-in-mobile">
+          <Tabs onChange={handleChangeTabs} value={tabIndex}>
+            <Tab label="Home" disableTouchRipple />
+            <Tab label="About" disableTouchRipple />
+            <Tab label="Product" disableTouchRipple />
+            <Tab label="Contact" disableTouchRipple />
+          </Tabs>
+        </Box>
         <div className="controls">
-          <div className="ham-menu hide-in-desktop">
-            <ul className="desktop-links-list hide-in-desktop df ai-c jc-sb fd-c">
-              <li>Home</li>
-              <li>About</li>
-              <li>Product</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-          <div className="settings-list">
-            <Tooltip title="Settings" TransitionComponent={Zoom} arrow>
+          <div className="mobile-links hide-in-desktop">
+            <Tooltip title="Links" TransitionComponent={Zoom} arrow>
               <IconButton
                 onClick={() => {
-                  toggleSettingsDrawer(true);
+                  toggleLinksDrawer(true);
                 }}
               >
-                <Settings />
+                <Menu />
               </IconButton>
             </Tooltip>
             <Drawer
               anchor="right"
-              open={settingsDrawer.right}
+              open={mobLinksDrawer.right}
               transitionDuration={400}
               onClose={() => {
-                toggleSettingsDrawer(false);
+                toggleLinksDrawer(false);
               }}
             >
               <Box
@@ -91,84 +80,52 @@ const Navbar = ({ onSetChoice, onChoice }) => {
               >
                 <Box component="div" className="df ai-c jc-sb" padding="20px">
                   <Typography component="p" variant="p">
-                    Settings
+                    Navigate to
                   </Typography>
                   <IconButton
                     onClick={() => {
-                      toggleSettingsDrawer(false);
+                      toggleLinksDrawer(false);
                     }}
                   >
                     <Clear />
                   </IconButton>
                 </Box>
+
                 <Divider variant="fullWidth" />
-                <Box
-                  component="div"
-                  className="df fd-c ai-fs jc-sb"
-                  padding="20px"
-                >
-                  <Typography component="p" variant="p" marginBottom="15px">
-                    Mode
-                  </Typography>
-                  <ToggleButtonGroup
-                    exclusive
-                    fullWidth
-                    value={onChoice}
-                    onChange={handleChoiceChange}
+                <Box className="hide-in-desktop" padding="20px">
+                  <Tabs
+                    onChange={handleChangeTabs}
+                    value={tabIndex}
+                    orientation="vertical"
                   >
-                    <ToggleButton value="Light">
-                      <LightMode sx={{ marginRight: "10px" }} />
-                      Light
-                    </ToggleButton>
-                    <ToggleButton value="Dark">
-                      <DarkMode sx={{ marginRight: "10px" }} />
-                      Dark
-                    </ToggleButton>
-                    <ToggleButton value="System">
-                      <DisplaySettings sx={{ marginRight: "10px" }} />
-                      System
-                    </ToggleButton>
-                  </ToggleButtonGroup>
-                </Box>
-                <Box
-                  component="div"
-                  className="df fd-c ai-fs jc-sb"
-                  padding="20px"
-                >
-                  <Typography component="p" variant="p" marginBottom="15px">
-                    Language
-                  </Typography>
-                  <List>
-                    <ListItemButton
-                      selected={langIndex === 0}
-                      onClick={(e) => {
-                        handleLanguageChange(e, 0);
-                      }}
-                    >
-                      <ListItemText primary="English" />
-                    </ListItemButton>
-                    <Divider variant="fullWidth" />
-                    <ListItemButton
-                      selected={langIndex === 1}
-                      onClick={(e) => {
-                        handleLanguageChange(e, 1);
-                      }}
-                    >
-                      <ListItemText primary="Français" />
-                    </ListItemButton>
-                    <Divider variant="fullWidth" />
-                    <ListItemButton
-                      selected={langIndex === 2}
-                      onClick={(e) => {
-                        handleLanguageChange(e, 2);
-                      }}
-                    >
-                      <ListItemText primary="العربية" />
-                    </ListItemButton>
-                  </List>
+                    <Tab label="Home" disableTouchRipple />
+                    <Tab label="About" disableTouchRipple />
+                    <Tab label="Product" disableTouchRipple />
+                    <Tab label="Contact" disableTouchRipple />
+                  </Tabs>
                 </Box>
               </Box>
             </Drawer>
+          </div>
+          <div className="settings-list">
+            <Tooltip title="Settings" TransitionComponent={Zoom} arrow>
+              <IconButton
+                onClick={() => {
+                  toggleSettingsDrawer(true);
+                }}
+              >
+                <Settings />
+              </IconButton>
+            </Tooltip>
+            <SettingsDrawer
+              onOpen={settingsDrawer.right}
+              onToggle={toggleSettingsDrawer}
+              onChoice={onChoice}
+              onSetChoice={onSetChoice}
+              onChange={handleChoiceChange}
+              langIndex={langIndex}
+              onChangeLanguage={handleLanguageChange}
+            />
           </div>
         </div>
       </section>
