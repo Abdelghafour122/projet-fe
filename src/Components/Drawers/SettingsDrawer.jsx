@@ -29,6 +29,7 @@ const SettingsDrawer = ({
   return (
     <Drawer
       anchor="right"
+      sx={{ zIndex: "99999" }}
       open={onOpen}
       transitionDuration={400}
       onClose={() => {

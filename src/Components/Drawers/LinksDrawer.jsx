@@ -13,6 +13,8 @@ import React from "react";
 const LinksDrawer = ({ onOpen, onToggle, tabIndex, onChangeTabs }) => {
   return (
     <Drawer
+      className="hide-in-desktop"
+      sx={{ zIndex: "99999" }}
       anchor="right"
       open={onOpen}
       transitionDuration={400}

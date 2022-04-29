@@ -1,28 +1,39 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-
-import image2 from "../Assets/Pictures/background2.jpg";
-import image3 from "../Assets/Pictures/background3.jpg";
-import image4 from "../Assets/Pictures/background4.jpg";
-import image5 from "../Assets/Pictures/background5.jpg";
-import image6 from "../Assets/Pictures/background6.jpg";
-import image7 from "../Assets/Pictures/background7.jpg";
-import image8 from "../Assets/Pictures/background8.jpg";
-
-const IMG_ARR = [image2, image3, image4, image5, image6, image7, image8];
 
 const HomePage = () => {
   return (
-    <Box
-      component="section"
-      bgcolor="custom.secondBgColor"
-      className="homepage"
-    >
-      <div className="container">
+    <Box component="section" className="homepage">
+      <section className="container df fd-c ai-fs jc-sb">
         <Typography component="h1" variant="h1" color="text.primary">
-          This is the homePage
+          A Great Place To Recieve Care
         </Typography>
-      </div>
+        <Typography variant="p" component="p" color="text.primary">
+          Our clinic offers one of the best medical treatments worldwide. With
+          our team of highly experienced and specialized doctors and surgeons,
+          you are in very safe hands.
+        </Typography>
+
+        <Box component="section">
+          <Button
+            variant="contained"
+            sx={{ marginRight: "30px" }}
+            color="primary"
+            disableElevation
+            size="large"
+          >
+            Book an Appointment
+          </Button>
+          <Button
+            variant="contained"
+            bgcolor="primary"
+            disableElevation
+            size="large"
+          >
+            Explore the Symptoms
+          </Button>
+        </Box>
+      </section>
     </Box>
   );
 };

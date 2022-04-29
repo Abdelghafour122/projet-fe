@@ -5,31 +5,16 @@ nav {
   padding: 10px 0;
   width: 100%;
   height: auto;
-  // border-bottom: 1px solid lightgray;
   backdrop-filter: blur(5px);
   font-family: "Poppins";
   font-weight: 500;
+  z-index: 999;
   & .controls {
     @include breakpoint-down(small) {
       display: flex;
       gap: 15px;
     }
   }
-  // & ul {
-  //   list-style: none;
-  //   margin: 0;
-  //   padding: 0;
-  //   & li {
-  //     transition: 0.3s;
-  //     cursor: pointer;
-  //     &:hover {
-  //       color: $azure-blue;
-  //     }
-  //     &:not(:last-of-type) {
-  //       margin-right: 30px;
-  //     }
-  //   }
-  // }
   & .MuiTabs-flexContainer {
     gap: 20px;
     @include breakpoint-down(medium) {

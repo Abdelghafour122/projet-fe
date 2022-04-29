@@ -12,7 +12,6 @@ const darkTheme = createTheme({
   },
   typography: {
     fontFamily: " Poppins",
-    // dir ga3 les type t3 text li ts7a9hom Hna
     p: {
       fontFamily: "Poppins",
       fontSize: "18px",
