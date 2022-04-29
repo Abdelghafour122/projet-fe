@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import logo from "../Assets/Pictures/logo.png";
-import {
-  Drawer,
-  IconButton,
-  Tooltip,
-  Typography,
-  Divider,
-  Tab,
-  Tabs,
-} from "@mui/material";
-import { Settings, Clear, Menu } from "@mui/icons-material";
+import { IconButton, Tooltip, Tab, Tabs } from "@mui/material";
+import { Settings, Menu } from "@mui/icons-material";
 import { Box } from "@mui/system";
 import { Zoom } from "@mui/material";
 import SettingsDrawer from "./Drawers/SettingsDrawer";
+import LinksDrawer from "./Drawers/LinksDrawer";
 
 const Navbar = ({ onSetChoice, onChoice }) => {
   const [settingsDrawer, setSettingsDrawer] = useState({ right: false });
@@ -62,50 +55,12 @@ const Navbar = ({ onSetChoice, onChoice }) => {
                 <Menu />
               </IconButton>
             </Tooltip>
-            <Drawer
-              anchor="right"
-              open={mobLinksDrawer.right}
-              transitionDuration={400}
-              onClose={() => {
-                toggleLinksDrawer(false);
-              }}
-            >
-              <Box
-                bgcolor="custom.firstBgColor"
-                sx={{
-                  width: "350px",
-                  height: "100%",
-                  fontFamily: "Poppins",
-                }}
-              >
-                <Box component="div" className="df ai-c jc-sb" padding="20px">
-                  <Typography component="p" variant="p">
-                    Navigate to
-                  </Typography>
-                  <IconButton
-                    onClick={() => {
-                      toggleLinksDrawer(false);
-                    }}
-                  >
-                    <Clear />
-                  </IconButton>
-                </Box>
-
-                <Divider variant="fullWidth" />
-                <Box className="hide-in-desktop" padding="20px">
-                  <Tabs
-                    onChange={handleChangeTabs}
-                    value={tabIndex}
-                    orientation="vertical"
-                  >
-                    <Tab label="Home" disableTouchRipple />
-                    <Tab label="About" disableTouchRipple />
-                    <Tab label="Product" disableTouchRipple />
-                    <Tab label="Contact" disableTouchRipple />
-                  </Tabs>
-                </Box>
-              </Box>
-            </Drawer>
+            <LinksDrawer
+              onOpen={mobLinksDrawer.right}
+              onToggle={toggleLinksDrawer}
+              tabIndex={tabIndex}
+              onChangeTabs={handleChangeTabs}
+            />
           </div>
           <div className="settings-list">
             <Tooltip title="Settings" TransitionComponent={Zoom} arrow>
