@@ -6,22 +6,50 @@ import {
   Tooltip,
   Typography,
   ThemeProvider,
+  Divider,
 } from "@mui/material";
-import { Settings } from "@mui/icons-material";
+import {
+  Settings,
+  Clear,
+  LightMode,
+  DarkMode,
+  DisplaySettings,
+} from "@mui/icons-material";
 import { Box } from "@mui/system";
-import { Zoom } from "@mui/material";
+import {
+  Zoom,
+  ToggleButton,
+  ToggleButtonGroup,
+  ListItemText,
+  ListItemButton,
+  List,
+} from "@mui/material";
 import lightTheme from "../lightThemeStyle";
 import darkTheme from "../darkThemeStyle";
 
 const Navbar = () => {
   const [settingsDrawer, setSettingsDrawer] = useState({ right: false });
+  const [choice, setChoice] = useState("System");
+  const [language, setLanguage] = useState("English");
+  const [langIndex, setLangIndex] = useState(0);
+
+  const handleLanguageChange = (newLanguage, index) => {
+    // console.log(newLanguage.target.textContent);
+    setLangIndex(index);
+    // console.log(index);
+  };
+
+  const handleChoiceChange = (newChoice) => {
+    setChoice(newChoice.currentTarget.value);
+  };
+
   const toggleSettingsDrawer = (open) => {
     setSettingsDrawer({ right: open });
   };
   return (
     // make a ternary for themes, use usememo, see device preferences too
-    <ThemeProvider theme={lightTheme}>
-      <Box component="nav" bgcolor="custom.mainBgColor">
+    <ThemeProvider theme={darkTheme}>
+      <Box component="nav" bgcolor="custom.navbarBgColor">
         <section className="container df ai-c jc-sb">
           <img className="logo" src={logo} alt="Medical logo" />
           <ul className="desktop-links-list hide-in-mobile df ai-c jc-c">
@@ -58,13 +86,91 @@ const Navbar = () => {
                 }}
               >
                 <Box
+                  bgcolor="custom.firstBgColor"
                   sx={{
-                    width: "300px",
+                    width: "350px",
                     height: "100%",
-                    color: "white",
+                    fontFamily: "Poppins",
                   }}
                 >
-                  MENU
+                  <Box component="div" className="df ai-c jc-sb" padding="20px">
+                    <Typography component="p" variant="p">
+                      Settings
+                    </Typography>
+                    <IconButton
+                      onClick={() => {
+                        toggleSettingsDrawer(false);
+                      }}
+                    >
+                      <Clear />
+                    </IconButton>
+                  </Box>
+                  <Divider variant="fullWidth" />
+                  <Box
+                    component="div"
+                    className="df fd-c ai-fs jc-sb"
+                    padding="20px"
+                  >
+                    <Typography component="p" variant="p" marginBottom="15px">
+                      Mode
+                    </Typography>
+                    <ToggleButtonGroup
+                      exclusive
+                      fullWidth
+                      value={choice}
+                      onChange={handleChoiceChange}
+                    >
+                      <ToggleButton value="Light">
+                        <LightMode sx={{ marginRight: "10px" }} />
+                        Light
+                      </ToggleButton>
+                      <ToggleButton value="Dark">
+                        <DarkMode sx={{ marginRight: "10px" }} />
+                        Dark
+                      </ToggleButton>
+                      <ToggleButton value="System">
+                        <DisplaySettings sx={{ marginRight: "10px" }} />
+                        System
+                      </ToggleButton>
+                    </ToggleButtonGroup>
+                  </Box>
+                  <Box
+                    component="div"
+                    className="df fd-c ai-fs jc-sb"
+                    padding="20px"
+                  >
+                    <Typography component="p" variant="p" marginBottom="15px">
+                      Language
+                    </Typography>
+                    <List>
+                      <ListItemButton
+                        selected={langIndex === 0}
+                        onClick={(e) => {
+                          handleLanguageChange(e, 0);
+                        }}
+                      >
+                        <ListItemText primary="English" />
+                      </ListItemButton>
+                      <Divider variant="fullWidth" />
+                      <ListItemButton
+                        selected={langIndex === 1}
+                        onClick={(e) => {
+                          handleLanguageChange(e, 1);
+                        }}
+                      >
+                        <ListItemText primary="Français" />
+                      </ListItemButton>
+                      <Divider variant="fullWidth" />
+                      <ListItemButton
+                        selected={langIndex === 2}
+                        onClick={(e) => {
+                          handleLanguageChange(e, 2);
+                        }}
+                      >
+                        <ListItemText primary="العربية" />
+                      </ListItemButton>
+                    </List>
+                  </Box>
                 </Box>
               </Drawer>
             </div>
