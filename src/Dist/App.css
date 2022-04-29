@@ -246,24 +246,72 @@ nav .MuiTabs-indicator {
   border-radius: 10px;
 }
 
-.homepage {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(http://localhost:3000/static/media/background10.7a1bfef7b8cc792c1668.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(http://localhost:3000/static/media/background10.7a1bfef7b8cc792c1668.jpg);
+.landingpage .homepage {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../Assets/Pictures/background10.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Assets/Pictures/background10.jpg);
   background-size: 100% 100%;
   background-attachment: fixed;
   height: 100vh;
 }
 
-.homepage .container h1 {
+@media (max-width: 35.9375rem) {
+  .landingpage .homepage {
+    height: 80vh;
+  }
+}
+
+.landingpage .homepage .hero h1 {
   font-size: 80px;
-  margin: 40px 0;
+  margin: 40px 0 20px;
   text-align: left;
 }
 
-.homepage .container p {
+@media (max-width: 47.9375rem) {
+  .landingpage .homepage .hero h1 {
+    font-size: 60px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .landingpage .homepage .hero h1 {
+    font-size: 45px;
+  }
+}
+
+.landingpage .homepage .hero p {
   max-width: 50%;
   text-align: left;
   margin-bottom: 40px;
   font-size: 25px;
+}
+
+@media (max-width: 47.9375rem) {
+  .landingpage .homepage .hero p {
+    max-width: 70%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .landingpage .homepage .hero p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .landingpage .homepage .hero button:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.landingpage .about-us {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.landingpage .about-us h1 {
+  font-size: 80px;
+  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */

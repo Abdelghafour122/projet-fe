@@ -1,0 +1,54 @@
+.landingpage {
+  .homepage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../Assets/Pictures/background10.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    @include breakpoint-down(small) {
+      height: 80vh;
+    }
+    & .hero {
+      & h1 {
+        font-size: 80px;
+        margin: 40px 0 20px;
+        text-align: left;
+        @include breakpoint-down(medium) {
+          font-size: 60px;
+          margin: 20px 0;
+        }
+        @include breakpoint-down(small) {
+          font-size: 45px;
+        }
+      }
+      & p {
+        max-width: 50%;
+        text-align: left;
+        margin-bottom: 40px;
+        font-size: 25px;
+        @include breakpoint-down(medium) {
+          max-width: 70%;
+          font-size: 20px;
+        }
+        @include breakpoint-down(small) {
+          font-size: 18px;
+        }
+      }
+      & button {
+        &:not(:last-of-type) {
+          @include breakpoint-down(small) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .about-us {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    & h1 {
+      font-size: 80px;
+      text-align: center;
+    }
+  }
+}
