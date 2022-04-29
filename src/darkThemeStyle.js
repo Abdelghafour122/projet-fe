@@ -19,6 +19,9 @@ const darkTheme = createTheme({
       fontFamily: "Libre Bodoni",
       fontSize: "50px",
     },
+    h4: {
+      fontFamily: "Libre Bodoni",
+    },
   },
 });
 

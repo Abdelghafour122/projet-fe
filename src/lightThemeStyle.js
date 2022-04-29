@@ -12,7 +12,6 @@ const lightTheme = createTheme({
   },
   typography: {
     fontFamily: " Poppins",
-    // dir ga3 les type t3 text li ts7a9hom Hna
     p: {
       fontFamily: "Poppins",
       fontSize: "18px",
@@ -20,6 +19,9 @@ const lightTheme = createTheme({
     h1: {
       fontFamily: "Libre Bodoni",
       fontSize: "50px",
+    },
+    h4: {
+      fontFamily: "Libre Bodoni",
     },
   },
 });
