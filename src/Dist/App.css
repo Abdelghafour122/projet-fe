@@ -375,6 +375,7 @@ nav .MuiTabs-indicator {
 @media (max-width: 47.9375rem) {
   .landingpage .about-us .MuiGrid-item .info p {
     font-size: 14px;
+    padding: 0 20px;
   }
 }
 /*# sourceMappingURL=App.css.map */
