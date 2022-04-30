@@ -40,7 +40,7 @@ const Navbar = ({ onSetChoice, onChoice }) => {
           <Tabs onChange={handleChangeTabs} value={tabIndex}>
             <Tab label="Home" disableTouchRipple />
             <Tab label="About" disableTouchRipple />
-            <Tab label="Product" disableTouchRipple />
+            <Tab label="Join Us" disableTouchRipple />
             <Tab label="Contact" disableTouchRipple />
           </Tabs>
         </Box>
