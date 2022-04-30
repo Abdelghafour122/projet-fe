@@ -5,6 +5,7 @@ import {
   Card,
   Grid,
   Rating,
+  TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -212,6 +213,27 @@ const HomePage = () => {
               </Card>
             </Grid>
           </Grid>
+        </section>
+      </Box>
+      <Box component="section" variant="section" bgcolor="custom.secondBgColor">
+        <section className="signup container df fd-c ai-c ">
+          <Typography component="h1" variant="h1" color="text.primary">
+            Get Our Wellness Newsletter
+          </Typography>
+          <Typography component="p" variant="p" color="text.secondary">
+            Filter out the noise and nurture your inbox with health and wellness
+            advice that’s inclusive and rooted in medical expertise.
+          </Typography>
+          <form action="" className="df ai-c jc-sb">
+            <TextField
+              id="outlined-basic"
+              label="Enter your email"
+              variant="outlined"
+            />
+            <Button variant="contained" color="primary" size="large">
+              Sign up
+            </Button>
+          </form>
         </section>
       </Box>
     </Box>
