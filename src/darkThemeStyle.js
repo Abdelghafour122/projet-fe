@@ -25,6 +25,9 @@ const darkTheme = createTheme({
     h5: {
       fontFamily: "Libre Bodoni",
     },
+    a: {
+      fontFamily: "Poppins",
+    },
   },
 });
 

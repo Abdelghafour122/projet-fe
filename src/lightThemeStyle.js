@@ -26,6 +26,9 @@ const lightTheme = createTheme({
     h5: {
       fontFamily: "Libre Bodoni",
     },
+    a: {
+      fontFamily: "Poppins",
+    },
   },
 });
 

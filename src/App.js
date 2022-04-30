@@ -5,6 +5,7 @@ import HomePage from "./Routes/HomePage";
 import { useMediaQuery, ThemeProvider, Box } from "@mui/material";
 import lightTheme from "./lightThemeStyle";
 import darkTheme from "./darkThemeStyle";
+import Footer from "./Components/Footer";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -33,6 +34,7 @@ function App() {
       <Box component="main" bgcolor="custom.secondBgColor" className="App">
         <Navbar onSetChoice={setChoice} onChoice={choice} />
         <HomePage />
+        <Footer />
       </Box>
     </ThemeProvider>
   );
