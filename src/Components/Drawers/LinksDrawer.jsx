@@ -47,7 +47,7 @@ const LinksDrawer = ({ onOpen, onToggle, tabIndex, onChangeTabs }) => {
           <Tabs onChange={onChangeTabs} value={tabIndex} orientation="vertical">
             <Tab label="Home" disableTouchRipple />
             <Tab label="About" disableTouchRipple />
-            <Tab label="Product" disableTouchRipple />
+            <Tab label="Join Us" disableTouchRipple />
             <Tab label="Contact" disableTouchRipple />
           </Tabs>
         </Box>
