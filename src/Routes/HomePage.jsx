@@ -151,7 +151,7 @@ const HomePage = () => {
                   quos, ut dolorum praesentium veniam quia atque. Eveniet, unde!
                 </Typography>
                 <Card component="div" className="df ai-c jc-sb">
-                  <Avatar alt="Anisha Milaki" src={avatar1} />
+                  <Avatar alt="Cindy Baker" src={avatar1} />
                   <Typography component="h5" variant="h5" color="text.primary">
                     Cindy Baker
                   </Typography>
@@ -169,7 +169,7 @@ const HomePage = () => {
                   quos, ut dolorum praesentium veniam quia atque. Eveniet, unde!
                 </Typography>
                 <Card component="div" className="df ai-c jc-sb">
-                  <Avatar alt="Cindy Baker" src={avatar2} />
+                  <Avatar alt="Yuri Lee" src={avatar2} />
                   <Typography component="h5" variant="h5" color="text.primary">
                     Yuri Lee
                   </Typography>

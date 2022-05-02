@@ -21,9 +21,10 @@ const Footer = () => {
             underline="always"
             component="a"
             variant="a"
-            onClick={() => {
-              navigate("about");
-            }}
+            // onClick={() => {
+            //   navigate("about");
+            // }}
+            href="https://abdelghafour122.github.io/about"
           >
             About
           </Link>
