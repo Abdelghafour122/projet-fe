@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import logo from "../Assets/Pictures/logo.png";
 import { Facebook, Pinterest, Instagram, Twitter } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -17,17 +17,11 @@ const Footer = () => {
           </Typography>
         </div>
         <div className="links">
-          <Link
-            underline="always"
-            component="a"
-            variant="a"
-            // onClick={() => {
-            //   navigate("about");
-            // }}
-            href="https://abdelghafour122.github.io/about"
-          >
-            About
-          </Link>
+          <RouterLink to="/about">
+            <Link underline="always" component="a" variant="a">
+              About
+            </Link>
+          </RouterLink>
           <Link underline="always" component="a" variant="a" href="#">
             Join Us
           </Link>
