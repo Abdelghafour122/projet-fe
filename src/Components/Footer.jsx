@@ -3,8 +3,10 @@ import { Box } from "@mui/system";
 import React from "react";
 import logo from "../Assets/Pictures/logo.png";
 import { Facebook, Pinterest, Instagram, Twitter } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <Box component="footer" bgcolor="custom.firstBgColor">
       <section className="container df ai-c jc-sb">
@@ -15,7 +17,14 @@ const Footer = () => {
           </Typography>
         </div>
         <div className="links">
-          <Link underline="always" component="a" variant="a" href="about">
+          <Link
+            underline="always"
+            component="a"
+            variant="a"
+            onClick={() => {
+              navigate("about");
+            }}
+          >
             About
           </Link>
           <Link underline="always" component="a" variant="a" href="#">
