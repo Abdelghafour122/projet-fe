@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./Dist/App.css";
 import Navbar from "./Components/Navbar";
 import HomePage from "./Routes/HomePage";
+import AboutPage from "./Routes/AboutPage";
+
 import { useMediaQuery, ThemeProvider, Box } from "@mui/material";
 import lightTheme from "./lightThemeStyle";
 import darkTheme from "./darkThemeStyle";
@@ -33,7 +36,10 @@ function App() {
     >
       <Box component="main" bgcolor="custom.secondBgColor" className="App">
         <Navbar onSetChoice={setChoice} onChoice={choice} />
-        <HomePage />
+        <Routes>
+          <Route path="/projet-fe" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
         <Footer />
       </Box>
     </ThemeProvider>

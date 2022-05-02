@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../Assets/Pictures/logo.png";
 import { IconButton, Tooltip, Tab, Tabs } from "@mui/material";
 import { Settings, Menu } from "@mui/icons-material";
@@ -12,6 +13,8 @@ const Navbar = ({ onSetChoice, onChoice }) => {
   const [mobLinksDrawer, setMobLinksDrawer] = useState({ right: false });
   const [langIndex, setLangIndex] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
+
+  let navigate = useNavigate();
 
   const toggleSettingsDrawer = (open) => {
     setSettingsDrawer({ right: open });
@@ -31,6 +34,11 @@ const Navbar = ({ onSetChoice, onChoice }) => {
 
   const handleChangeTabs = (e, newIndex) => {
     setTabIndex(newIndex);
+    console.log(e.target.textContent.toLowerCase());
+    const targeted = e.target.textContent.toLowerCase();
+    targeted === "home"
+      ? navigate("projet-fe")
+      : navigate(e.target.textContent.toLowerCase());
   };
   return (
     <Box component="nav" bgcolor="custom.navbarBgColor">

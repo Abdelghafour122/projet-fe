@@ -20,6 +20,9 @@ const lightTheme = createTheme({
       fontFamily: "Libre Bodoni",
       fontSize: "50px",
     },
+    h2: {
+      fontFamily: "Libre Bodoni",
+    },
     h4: {
       fontFamily: "Libre Bodoni",
     },

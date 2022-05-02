@@ -561,4 +561,194 @@ footer .container .socials *:not(:last-of-type) {
     margin-right: 4px;
   }
 }
+
+.about .heading {
+  text-align: center;
+}
+
+@media (max-width: 47.9375rem) {
+  .about .heading {
+    margin-bottom: 150px;
+  }
+}
+
+.about .heading h1 {
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 70px;
+}
+
+@media (max-width: 61.9375rem) {
+  .about .heading h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .about .heading h1 {
+    font-size: 54px;
+  }
+}
+
+.about .heading p {
+  text-align: center;
+  margin: 15px 0;
+  max-width: 70%;
+}
+
+@media (max-width: 61.9375rem) {
+  .about .heading p {
+    font-size: 16px;
+    max-width: unset;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .about .heading p {
+    font-size: 14px;
+    padding: 0 20px;
+    max-width: unset;
+  }
+}
+
+.about .doctors {
+  margin: 150px 0;
+}
+
+@media (max-width: 47.9375rem) {
+  .about .doctors .text {
+    text-align: center;
+  }
+}
+
+.about .doctors .text p {
+  margin: 30px 0;
+}
+
+@media (max-width: 61.9375rem) {
+  .about .doctors .text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .about .doctors .text p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
+
+.about .doctors .image {
+  text-align: center;
+}
+
+@media (max-width: 47.9375rem) {
+  .about .doctors .image {
+    width: 100%;
+  }
+}
+
+.about .doctors .image img {
+  height: 300px;
+  border-radius: 7px;
+}
+
+@media (max-width: 35.9375rem) {
+  .about .doctors .image img {
+    height: 250px;
+  }
+}
+
+.about .science {
+  margin-bottom: 150px;
+}
+
+@media (max-width: 47.9375rem) {
+  .about .science .text {
+    text-align: center;
+  }
+}
+
+.about .science .text p {
+  margin: 30px 0;
+}
+
+@media (max-width: 61.9375rem) {
+  .about .science .text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .about .science .text p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .about .science .image {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 61.9375rem) {
+  .about .science .image img {
+    height: 328px;
+  }
+}
+
+.about .news {
+  margin-bottom: 150px;
+}
+
+@media (max-width: 47.9375rem) {
+  .about .news .text {
+    text-align: center;
+  }
+}
+
+.about .news .text p {
+  margin: 30px 0;
+}
+
+@media (max-width: 61.9375rem) {
+  .about .news .text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .about .news .text p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
+
+.about .news .image {
+  text-align: center;
+}
+
+@media (max-width: 47.9375rem) {
+  .about .news .image {
+    width: 100%;
+  }
+}
+
+.about .news .image img {
+  height: 323px;
+  border-radius: 7px;
+  margin-inline: auto;
+}
+
+@media (max-width: 35.9375rem) {
+  .about .news .image img {
+    height: 250px;
+  }
+}
 /*# sourceMappingURL=App.css.map */
