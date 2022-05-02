@@ -15,7 +15,7 @@ const Footer = () => {
           </Typography>
         </div>
         <div className="links">
-          <Link underline="always" component="a" variant="a" href="/about">
+          <Link underline="always" component="a" variant="a" href="about">
             About
           </Link>
           <Link underline="always" component="a" variant="a" href="#">
