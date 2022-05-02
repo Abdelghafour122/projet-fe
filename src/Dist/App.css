@@ -548,18 +548,18 @@ footer .container .links a:not(:last-of-type) {
   }
 }
 
-footer .container .socials * {
-  cursor: pointer;
-}
-
-footer .container .socials *:not(:last-of-type) {
-  margin-right: 15px;
+footer .container .socials {
+  gap: 15px;
 }
 
 @media (max-width: 61.9375rem) {
-  footer .container .socials *:not(:last-of-type) {
+  footer .container .socials {
     margin-right: 4px;
   }
+}
+
+footer .container .socials * {
+  cursor: pointer;
 }
 
 .about .heading {

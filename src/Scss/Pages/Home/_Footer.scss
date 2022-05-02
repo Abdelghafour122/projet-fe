@@ -23,14 +23,12 @@ footer {
       }
     }
     & .socials {
+      gap: 15px;
+      @include breakpoint-down(large) {
+        margin-right: 4px;
+      }
       & * {
         cursor: pointer;
-        &:not(:last-of-type) {
-          margin-right: 15px;
-          @include breakpoint-down(large) {
-            margin-right: 4px;
-          }
-        }
       }
     }
   }

@@ -28,7 +28,7 @@ const Footer = () => {
             Contact Us
           </Link>
         </div>
-        <div className="socials">
+        <div className="socials df ai-c jc-sb">
           <Facebook fontSize="medium" color="primary" />
           <Pinterest fontSize="medium" color="primary" />
           <Instagram fontSize="medium" color="primary" />
