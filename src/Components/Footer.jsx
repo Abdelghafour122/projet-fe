@@ -28,12 +28,19 @@ const Footer = () => {
             component="a"
             variant="a"
             onClick={(e) => {
-              navigate(e.target.textContent);
+              navigate(e.target.textContent.toLowerCase());
             }}
           >
             About
           </Link>
-          <Link underline="always" component="a" variant="a">
+          <Link
+            underline="always"
+            component="a"
+            variant="a"
+            onClick={(e) => {
+              navigate(e.target.textContent.toLowerCase());
+            }}
+          >
             Join Us
           </Link>
           <Link underline="always" component="a" variant="a">
