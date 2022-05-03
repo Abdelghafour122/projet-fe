@@ -30,10 +30,6 @@ const Navbar = ({ onSetChoice, onChoice }) => {
 
   const handleChoiceChange = (newChoice) => {
     onSetChoice(newChoice.currentTarget.value);
-    const targeted = newChoice.currentTarget.value;
-    targeted === "home"
-      ? navigate("projet-fe")
-      : navigate(newChoice.currentTarget.value);
   };
 
   const handleChangeTabs = (e, newIndex) => {
