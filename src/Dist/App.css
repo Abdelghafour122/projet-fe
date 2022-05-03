@@ -542,6 +542,10 @@ footer .container .creds {
   text-align: center;
 }
 
+footer .container .links a {
+  cursor: pointer;
+}
+
 footer .container .links a:not(:last-of-type) {
   margin-right: 15px;
 }

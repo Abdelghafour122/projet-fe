@@ -9,7 +9,7 @@ import {
   Twitter,
   LinkedIn,
 } from "@mui/icons-material";
-import { useNavigate, Link as RouterLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -23,18 +23,23 @@ const Footer = () => {
           </Typography>
         </div>
         <div className="links">
-          <RouterLink to="/about">
-            <Link underline="always" component="a" variant="a">
-              About
-            </Link>
-          </RouterLink>
-          <Link underline="always" component="a" variant="a" href="/about">
+          <Link
+            underline="always"
+            component="a"
+            variant="a"
+            onClick={(e) => {
+              navigate(e.target.textContent);
+            }}
+          >
+            About
+          </Link>
+          <Link underline="always" component="a" variant="a">
             Join Us
           </Link>
-          <Link underline="always" component="a" variant="a" href="#">
+          <Link underline="always" component="a" variant="a">
             Newsletters
           </Link>
-          <Link underline="always" component="a" variant="a" href="#">
+          <Link underline="always" component="a" variant="a">
             Contact Us
           </Link>
         </div>

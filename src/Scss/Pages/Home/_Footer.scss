@@ -12,13 +12,16 @@ footer {
       text-align: center;
     }
     & .links {
-      & a:not(:last-of-type) {
-        margin-right: 15px;
-        @include breakpoint-down(large) {
-          margin-right: 5px;
-        }
-        @include breakpoint-down(medium) {
-          margin-right: 7px;
+      & a {
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-right: 15px;
+          @include breakpoint-down(large) {
+            margin-right: 5px;
+          }
+          @include breakpoint-down(medium) {
+            margin-right: 7px;
+          }
         }
       }
     }
