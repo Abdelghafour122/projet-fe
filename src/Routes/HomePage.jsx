@@ -255,6 +255,7 @@ const HomePage = () => {
               variant="contained"
               color="primary"
               size="large"
+              disabled={!validEmail}
               onClick={handleSubmit}
             >
               Sign up
