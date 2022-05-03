@@ -298,9 +298,19 @@ nav .MuiTabs-indicator {
   }
 }
 
+.landingpage .homepage .hero .button-holder {
+  gap: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 @media (max-width: 35.9375rem) {
-  .landingpage .homepage .hero button:not(:last-of-type) {
-    margin-bottom: 20px;
+  .landingpage .homepage .hero .button-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -432,11 +442,11 @@ nav .MuiTabs-indicator {
 .landingpage .impressions .MuiGrid-root .MuiPaper-root .MuiPaper-root {
   -webkit-box-shadow: none;
           box-shadow: none;
+  gap: 15px;
 }
 
 .landingpage .impressions .MuiGrid-root .MuiPaper-root .MuiPaper-root h5 {
   font-size: 1.2rem;
-  margin-left: 15px;
 }
 
 .landingpage .signup {

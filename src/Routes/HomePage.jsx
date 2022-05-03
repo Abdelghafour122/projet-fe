@@ -35,10 +35,9 @@ const HomePage = () => {
             you are in very safe hands.
           </Typography>
 
-          <Box component="section">
+          <Box component="section" className="button-holder df ai-c">
             <Button
               variant="contained"
-              sx={{ marginRight: "25px" }}
               color="primary"
               disableElevation
               size="medium"

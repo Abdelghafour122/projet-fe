@@ -2,7 +2,13 @@ import { Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import logo from "../Assets/Pictures/logo.png";
-import { Facebook, Pinterest, Instagram, Twitter } from "@mui/icons-material";
+import {
+  Facebook,
+  Pinterest,
+  Instagram,
+  Twitter,
+  LinkedIn,
+} from "@mui/icons-material";
 import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {
@@ -37,6 +43,7 @@ const Footer = () => {
           <Pinterest fontSize="medium" color="primary" />
           <Instagram fontSize="medium" color="primary" />
           <Twitter fontSize="medium" color="primary" />
+          <LinkedIn fontSize="medium" color="primary" />
         </div>
       </section>
     </Box>
