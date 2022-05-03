@@ -8,7 +8,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Search, ContentPasteSearch } from "@mui/icons-material";
 import vitaminsSupps from "../Assets/Pictures/vitaminsSupps.webp";
 import sleep from "../Assets/Pictures/sleep.webp";
@@ -21,7 +21,21 @@ import avatar4 from "../Assets/Pictures/avatar-shanai.png";
 
 import mentalHealth from "../Assets/Pictures/mentalHealth.webp";
 
+const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
 const HomePage = () => {
+  const [email, setEmail] = useState("");
+  const [validEmail, setValidEmail] = useState(false);
+
+  useEffect(() => {
+    setValidEmail(EMAIL_REGEX.test(email));
+  }, [email]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ email, validEmail });
+    setEmail("");
+  };
   return (
     <Box component="section" className="landingpage">
       <Box component="section" className="homepage">
@@ -223,13 +237,26 @@ const HomePage = () => {
             Filter out the noise and nurture your inbox with health and wellness
             advice that’s inclusive and rooted in medical expertise.
           </Typography>
-          <form action="" className="df ai-c jc-sb">
+          <form action="" className="df ai-c jc-sb" onSubmit={handleSubmit}>
             <TextField
               id="outlined-basic"
               label="Enter your email"
               variant="outlined"
+              type="email"
+              error={email !== "" && !validEmail}
+              color={validEmail ? "success" : "primary"}
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              helperText={email && !validEmail && "This is not an Email"}
             />
-            <Button variant="contained" color="primary" size="large">
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={handleSubmit}
+            >
               Sign up
             </Button>
           </form>

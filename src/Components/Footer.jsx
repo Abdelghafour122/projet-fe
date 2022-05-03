@@ -43,10 +43,24 @@ const Footer = () => {
           >
             Join Us
           </Link>
-          <Link underline="always" component="a" variant="a">
-            Newsletters
+          <Link
+            underline="always"
+            component="a"
+            variant="a"
+            onClick={(e) => {
+              navigate(e.target.textContent.toLowerCase());
+            }}
+          >
+            Newsletter
           </Link>
-          <Link underline="always" component="a" variant="a">
+          <Link
+            underline="always"
+            component="a"
+            variant="a"
+            onClick={(e) => {
+              navigate(e.target.textContent.toLowerCase());
+            }}
+          >
             Contact Us
           </Link>
         </div>

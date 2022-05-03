@@ -10,6 +10,8 @@ import lightTheme from "./lightThemeStyle";
 import darkTheme from "./darkThemeStyle";
 import Footer from "./Components/Footer";
 import JoinusPage from "./Routes/JoinusPage";
+import ContactusPage from "./Routes/ContactusPage";
+import NewsletterPage from "./Routes/NewsletterPage";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -41,6 +43,8 @@ function App() {
           <Route path="/projet-fe" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/join%20us" element={<JoinusPage />} />
+          <Route path="/contact%20us" element={<ContactusPage />} />
+          <Route path="/newsletter" element={<NewsletterPage />} />
         </Routes>
         <Footer />
       </Box>

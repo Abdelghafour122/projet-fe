@@ -1,8 +1,49 @@
+import { Button, Grid, TextField } from "@mui/material";
 import React from "react";
 
 const ContactusPage = () => {
   return (
-    <div>Make a contact form names, email, textfield basic validation</div>
+    <section className="contact">
+      <section className="container">
+        <Grid
+          container
+          spacing={{ xs: 2, sm: 3, md: 5 }}
+          columns={{ xs: 1, sm: 2, md: 2 }}
+        >
+          <Grid item md={1} className="image df fd-c ai-fs jc-c">
+            <img src="" alt="" />
+          </Grid>
+          <Grid item md={1} className="info df fd-c ai-fs jc-c">
+            <TextField
+              id="outlined-basic"
+              label="Full Name"
+              variant="outlined"
+              type="text"
+              fullWidth
+            />
+            <TextField
+              id="outlined-basic"
+              label="email"
+              variant="outlined"
+              fullWidth
+              type="email"
+            />
+            <TextField
+              id="outlined-basic"
+              label="Content"
+              variant="outlined"
+              type="text"
+              fullWidth
+              multiline
+              rows={4}
+            />
+            <Button variant="contained" fullWidth size="large">
+              Send
+            </Button>
+          </Grid>
+        </Grid>
+      </section>
+    </section>
   );
 };
 

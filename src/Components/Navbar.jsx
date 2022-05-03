@@ -49,7 +49,7 @@ const Navbar = ({ onSetChoice, onChoice }) => {
             <Tab label="Home" disableTouchRipple />
             <Tab label="About" disableTouchRipple />
             <Tab label="Join Us" disableTouchRipple />
-            <Tab label="Contact" disableTouchRipple />
+            <Tab label="Contact Us" disableTouchRipple />
           </Tabs>
         </Box>
         <div className="controls">
