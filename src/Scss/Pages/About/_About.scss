@@ -93,7 +93,10 @@
     }
   }
   & .news {
-    margin-bottom: 150px;
+    padding-bottom: 230px;
+    @include breakpoint-down(small) {
+      padding-bottom: 320px;
+    }
     & .text {
       @include breakpoint-down(medium) {
         text-align: center;

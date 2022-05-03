@@ -9,6 +9,7 @@ import { useMediaQuery, ThemeProvider, Box } from "@mui/material";
 import lightTheme from "./lightThemeStyle";
 import darkTheme from "./darkThemeStyle";
 import Footer from "./Components/Footer";
+import JoinusPage from "./Routes/JoinusPage";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -39,6 +40,7 @@ function App() {
         <Routes>
           <Route path="/projet-fe" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/join%20us" element={<JoinusPage />} />
         </Routes>
         <Footer />
       </Box>
