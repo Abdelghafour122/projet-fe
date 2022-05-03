@@ -28,7 +28,7 @@ const Footer = () => {
               About
             </Link>
           </RouterLink>
-          <Link underline="always" component="a" variant="a" href="#">
+          <Link underline="always" component="a" variant="a" href="/about">
             Join Us
           </Link>
           <Link underline="always" component="a" variant="a" href="#">
