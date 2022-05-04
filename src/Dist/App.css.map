@@ -13,7 +13,9 @@
         "../Scss/Pages/About/_About.scss",
         "../Scss/Pages/Joinus/_Joinus.scss",
         "../Scss/Pages/Newsletter/_Newsletter.scss",
-        "../Scss/Pages/Contact/_Contact.scss"
+        "../Scss/Pages/Contact/_Contact.scss",
+        "../Scss/Pages/Appointment/_Appointment.scss",
+        "../Scss/Pages/Symptoms/_Symptoms.scss"
     ],
     "names": [],
     "file": "App.css"
