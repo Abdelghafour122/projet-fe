@@ -1,5 +1,6 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import SuccessSnackbar from "../Components/Snackbars/SuccessSnackbar";
 
 const USER_REGEX = /^[A-z]{3,50}$/;
 const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -12,6 +13,19 @@ const ContactusPage = () => {
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
   const [content, setContent] = useState("");
+
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   useEffect(() => {
     setValidFullName(USER_REGEX.test(fullName));
@@ -32,6 +46,7 @@ const ContactusPage = () => {
     setFullName("");
     setEmail("");
     setContent("");
+    handleClick();
     console.log({ fullName, email, content });
   };
 
@@ -118,6 +133,11 @@ const ContactusPage = () => {
           </Grid>
         </Grid>
       </section>
+      <SuccessSnackbar
+        open={open}
+        handleClose={handleClose}
+        text={"Your feedback was shared!"}
+      />
     </section>
   );
 };

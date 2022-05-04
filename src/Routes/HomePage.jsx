@@ -21,6 +21,7 @@ import avatar3 from "../Assets/Pictures/avatar-richard.png";
 import avatar4 from "../Assets/Pictures/avatar-shanai.png";
 
 import mentalHealth from "../Assets/Pictures/mentalHealth.webp";
+import SuccessSnackbar from "../Components/Snackbars/SuccessSnackbar";
 
 const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
@@ -30,6 +31,19 @@ const HomePage = () => {
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
 
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   useEffect(() => {
     setValidEmail(EMAIL_REGEX.test(email));
   }, [email]);
@@ -37,6 +51,7 @@ const HomePage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ email, validEmail });
+    handleClick();
     setEmail("");
   };
   return (
@@ -269,6 +284,11 @@ const HomePage = () => {
           </form>
         </section>
       </Box>
+      <SuccessSnackbar
+        open={open}
+        handleClose={handleClose}
+        text={"Joined successfully!"}
+      />
     </Box>
   );
 };

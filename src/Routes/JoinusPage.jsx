@@ -1,5 +1,6 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import SuccessSnackbar from "../Components/Snackbars/SuccessSnackbar";
 
 const USER_REGEX = /^[A-z]{3,23}$/;
 const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -12,6 +13,19 @@ const JoinusPage = () => {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   useEffect(() => {
     setValidFirstName(USER_REGEX.test(firstName));
@@ -33,6 +47,7 @@ const JoinusPage = () => {
     setFirstName("");
     setLastName("");
     setEmail("");
+    handleClick();
   };
 
   return (
@@ -117,6 +132,11 @@ const JoinusPage = () => {
             </form>
           </Grid>
         </Grid>
+        <SuccessSnackbar
+          open={open}
+          handleClose={handleClose}
+          text={"Your request was submitted!"}
+        />
       </section>
     </section>
   );
