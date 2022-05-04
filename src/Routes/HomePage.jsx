@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Search, ContentPasteSearch } from "@mui/icons-material";
 import vitaminsSupps from "../Assets/Pictures/vitaminsSupps.webp";
 import sleep from "../Assets/Pictures/sleep.webp";
@@ -24,6 +25,8 @@ import mentalHealth from "../Assets/Pictures/mentalHealth.webp";
 const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
 
@@ -56,6 +59,7 @@ const HomePage = () => {
               disableElevation
               size="medium"
               endIcon={<ContentPasteSearch />}
+              onClick={() => navigate("/appointment")}
             >
               Book an Appointment
             </Button>
@@ -65,6 +69,7 @@ const HomePage = () => {
               disableElevation
               size="medium"
               endIcon={<Search />}
+              onClick={() => navigate("/symptoms")}
             >
               Explore the Symptoms
             </Button>
