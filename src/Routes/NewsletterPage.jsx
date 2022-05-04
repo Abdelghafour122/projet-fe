@@ -1,12 +1,26 @@
 import { Grid, Typography, TextField, Button } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import newsletter from "../Assets/Pictures/newsletter.jpeg";
+import SuccessSnackbar from "../Components/Snackbars/SuccessSnackbar";
 
 const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 const NewsletterPage = () => {
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
+
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   useEffect(() => {
     setValidEmail(EMAIL_REGEX.test(email));
@@ -16,6 +30,7 @@ const NewsletterPage = () => {
     e.preventDefault();
     console.log({ email, validEmail });
     setEmail("");
+    handleClick();
   };
   return (
     <section className="newsletter">
@@ -69,6 +84,11 @@ const NewsletterPage = () => {
             </form>
           </Grid>
         </Grid>
+        <SuccessSnackbar
+          open={open}
+          handleClose={handleClose}
+          text={"Joined successfully!"}
+        />
       </section>
     </section>
   );
