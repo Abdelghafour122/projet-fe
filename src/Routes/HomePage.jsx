@@ -242,6 +242,7 @@ const HomePage = () => {
               id="outlined-basic"
               label="Enter your email"
               variant="outlined"
+              dir="ltr"
               type="email"
               error={email !== "" && !validEmail}
               color={validEmail ? "success" : "primary"}

@@ -17,6 +17,7 @@ const ContactusPage = () => {
             <TextField
               id="outlined-basic"
               label="Full Name"
+              dir="ltr"
               variant="outlined"
               type="text"
               fullWidth
@@ -24,6 +25,7 @@ const ContactusPage = () => {
             <TextField
               id="outlined-basic"
               label="email"
+              dir="ltr"
               variant="outlined"
               fullWidth
               type="email"
@@ -31,6 +33,7 @@ const ContactusPage = () => {
             <TextField
               id="outlined-basic"
               label="Content"
+              dir="ltr"
               variant="outlined"
               type="text"
               fullWidth

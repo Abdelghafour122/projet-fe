@@ -45,6 +45,7 @@ const NewsletterPage = () => {
               <TextField
                 id="outlined-basic"
                 label="Email"
+                dir="ltr"
                 variant="outlined"
                 fullWidth
                 type="email"

@@ -9,23 +9,33 @@ import SettingsDrawer from "./Drawers/SettingsDrawer";
 import LinksDrawer from "./Drawers/LinksDrawer";
 
 const Navbar = ({ onSetChoice, onChoice }) => {
+  const [direction, setDirection] = useState(
+    document.querySelector("html").dir
+  );
   const [settingsDrawer, setSettingsDrawer] = useState({ right: false });
   const [mobLinksDrawer, setMobLinksDrawer] = useState({ right: false });
+  // make left sided drawers
   const [langIndex, setLangIndex] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
 
   let navigate = useNavigate();
   useEffect(() => {
-    if (langIndex === 0 || langIndex === 1)
+    if (langIndex === 0 || langIndex === 1) {
       document.querySelector("html").dir = "ltr";
-    else if (langIndex === 2) document.querySelector("html").dir = "rtl";
+      setDirection("ltr");
+    } else if (langIndex === 2) {
+      document.querySelector("html").dir = "rtl";
+      setDirection("rtl");
+    }
   }, [langIndex]);
 
   const toggleSettingsDrawer = (open) => {
+    // check the direction
     setSettingsDrawer({ right: open });
   };
 
   const toggleLinksDrawer = (openL) => {
+    // check the direction
     setMobLinksDrawer({ right: openL });
   };
 

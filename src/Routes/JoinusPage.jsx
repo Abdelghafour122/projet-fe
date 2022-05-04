@@ -61,6 +61,7 @@ const JoinusPage = () => {
               <TextField
                 id="outlined-basic"
                 label="First Name"
+                dir="ltr"
                 variant="outlined"
                 type="text"
                 fullWidth
@@ -77,6 +78,7 @@ const JoinusPage = () => {
               <TextField
                 id="outlined-basic"
                 label="Last Name"
+                dir="ltr"
                 variant="outlined"
                 type="text"
                 fullWidth
@@ -91,6 +93,7 @@ const JoinusPage = () => {
               <TextField
                 id="outlined-basic"
                 label="Email"
+                dir="ltr"
                 variant="outlined"
                 type="email"
                 fullWidth
