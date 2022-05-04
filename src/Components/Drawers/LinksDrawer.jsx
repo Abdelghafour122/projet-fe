@@ -10,12 +10,18 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 
-const LinksDrawer = ({ onOpen, onToggle, tabIndex, onChangeTabs }) => {
+const LinksDrawer = ({
+  onOpen,
+  onToggle,
+  tabIndex,
+  onChangeTabs,
+  direction,
+}) => {
   return (
     <Drawer
       className="hide-in-desktop"
       sx={{ zIndex: "99999" }}
-      anchor="right"
+      anchor={direction === "rtl" ? "left" : direction === "ltr" && "right"}
       open={onOpen}
       transitionDuration={400}
       onClose={() => {
@@ -48,7 +54,7 @@ const LinksDrawer = ({ onOpen, onToggle, tabIndex, onChangeTabs }) => {
             <Tab label="Home" disableTouchRipple />
             <Tab label="About" disableTouchRipple />
             <Tab label="Join Us" disableTouchRipple />
-            <Tab label="Contact" disableTouchRipple />
+            <Tab label="Contact Us" disableTouchRipple />
           </Tabs>
         </Box>
       </Box>

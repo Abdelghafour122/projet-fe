@@ -25,10 +25,11 @@ const SettingsDrawer = ({
   onChange,
   onChangeLanguage,
   langIndex,
+  direction,
 }) => {
   return (
     <Drawer
-      anchor="right"
+      anchor={direction === "rtl" ? "left" : direction === "ltr" && "right"}
       sx={{ zIndex: "99999" }}
       open={onOpen}
       transitionDuration={400}

@@ -874,4 +874,48 @@ footer .container .socials * {
     width: unset;
   }
 }
+
+.contact {
+  margin-top: 120px;
+  margin-bottom: 270px;
+}
+
+@media (max-width: 47.9375rem) {
+  .contact .text {
+    margin-bottom: 40px;
+  }
+}
+
+.contact .text h1 {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 61.9375rem) {
+  .contact .text h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .contact .text h1 {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 61.9375rem) {
+  .contact .text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .contact .text p {
+    font-size: 14px;
+  }
+}
+
+.contact .info form {
+  gap: 20px;
+}
 /*# sourceMappingURL=App.css.map */

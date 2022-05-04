@@ -1,0 +1,32 @@
+.contact {
+  margin-top: 120px;
+  margin-bottom: 270px;
+  & .text {
+    @include breakpoint-down(medium) {
+      margin-bottom: 40px;
+    }
+    & h1 {
+      font-size: 80px;
+      margin-bottom: 30px;
+      @include breakpoint-down(large) {
+        font-size: 60px;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 54px;
+      }
+    }
+    & p {
+      @include breakpoint-down(large) {
+        font-size: 16px;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 14px;
+      }
+    }
+  }
+  & .info {
+    & form {
+      gap: 20px;
+    }
+  }
+}

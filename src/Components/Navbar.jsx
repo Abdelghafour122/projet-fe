@@ -12,7 +12,11 @@ const Navbar = ({ onSetChoice, onChoice }) => {
   const [direction, setDirection] = useState(
     document.querySelector("html").dir
   );
-  const [settingsDrawer, setSettingsDrawer] = useState({ right: false });
+  const [settingsDrawer, setSettingsDrawer] = useState(
+    direction === "ltr"
+      ? { right: false }
+      : direction === "rtl" && { right: false }
+  );
   const [mobLinksDrawer, setMobLinksDrawer] = useState({ right: false });
   // make left sided drawers
   const [langIndex, setLangIndex] = useState(0);
@@ -31,12 +35,20 @@ const Navbar = ({ onSetChoice, onChoice }) => {
 
   const toggleSettingsDrawer = (open) => {
     // check the direction
-    setSettingsDrawer({ right: open });
+    setSettingsDrawer(
+      direction === "ltr"
+        ? { right: open }
+        : direction === "rtl" && { left: open }
+    );
   };
 
   const toggleLinksDrawer = (openL) => {
     // check the direction
-    setMobLinksDrawer({ right: openL });
+    setMobLinksDrawer(
+      direction === "ltr"
+        ? { right: openL }
+        : direction === "rtl" && { left: openL }
+    );
   };
 
   const handleLanguageChange = (index) => {
@@ -79,10 +91,15 @@ const Navbar = ({ onSetChoice, onChoice }) => {
               </IconButton>
             </Tooltip>
             <LinksDrawer
-              onOpen={mobLinksDrawer.right}
+              onOpen={
+                direction === "ltr"
+                  ? mobLinksDrawer.right
+                  : direction === "rtl" && mobLinksDrawer.left
+              }
               onToggle={toggleLinksDrawer}
               tabIndex={tabIndex}
               onChangeTabs={handleChangeTabs}
+              direction={direction}
             />
           </div>
           <div className="settings-list">
@@ -96,13 +113,18 @@ const Navbar = ({ onSetChoice, onChoice }) => {
               </IconButton>
             </Tooltip>
             <SettingsDrawer
-              onOpen={settingsDrawer.right}
+              onOpen={
+                direction === "ltr"
+                  ? settingsDrawer.right
+                  : direction === "rtl" && settingsDrawer.left
+              }
               onToggle={toggleSettingsDrawer}
               onChoice={onChoice}
               onSetChoice={onSetChoice}
               onChange={handleChoiceChange}
               langIndex={langIndex}
               onChangeLanguage={handleLanguageChange}
+              direction={direction}
             />
           </div>
         </div>
