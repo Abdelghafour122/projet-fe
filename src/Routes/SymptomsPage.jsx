@@ -1,4 +1,4 @@
-import { ExpandMore } from "@mui/icons-material";
+import { ContentPasteSearchTwoTone, ExpandMore } from "@mui/icons-material";
 import {
   Accordion,
   AccordionDetails,
@@ -60,6 +60,7 @@ const SymptomsPage = () => {
           variant="contained"
           color="primary"
           size="large"
+          endIcon={<ContentPasteSearchTwoTone />}
           onClick={() => navigate("/appointment")}
         >
           Book an appointment

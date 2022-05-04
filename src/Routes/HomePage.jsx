@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, ContentPasteSearch } from "@mui/icons-material";
+import { ContentPasteSearchTwoTone, SearchTwoTone } from "@mui/icons-material";
 import vitaminsSupps from "../Assets/Pictures/vitaminsSupps.webp";
 import sleep from "../Assets/Pictures/sleep.webp";
 import nutritionYellow from "../Assets/Pictures/nutritionYellow.webp";
@@ -58,7 +58,7 @@ const HomePage = () => {
               color="primary"
               disableElevation
               size="medium"
-              endIcon={<ContentPasteSearch />}
+              endIcon={<ContentPasteSearchTwoTone />}
               onClick={() => navigate("/appointment")}
             >
               Book an Appointment
@@ -68,7 +68,7 @@ const HomePage = () => {
               bgcolor="primary"
               disableElevation
               size="medium"
-              endIcon={<Search />}
+              endIcon={<SearchTwoTone />}
               onClick={() => navigate("/symptoms")}
             >
               Explore the Symptoms
