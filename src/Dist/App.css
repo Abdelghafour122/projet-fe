@@ -499,6 +499,10 @@ nav .MuiTabs-indicator {
   }
 }
 
+.landingpage .signup form {
+  gap: 30px;
+}
+
 @media (max-width: 35.9375rem) {
   .landingpage .signup form {
     display: -webkit-box;
@@ -519,10 +523,6 @@ nav .MuiTabs-indicator {
   .landingpage .signup form input {
     min-width: unset;
   }
-}
-
-.landingpage .signup form button {
-  margin-left: 30px;
 }
 
 @media (max-width: 35.9375rem) {

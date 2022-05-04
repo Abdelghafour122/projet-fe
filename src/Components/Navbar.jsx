@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../Assets/Pictures/logo.png";
 import { IconButton, Tooltip, Tab, Tabs } from "@mui/material";
@@ -15,6 +15,11 @@ const Navbar = ({ onSetChoice, onChoice }) => {
   const [tabIndex, setTabIndex] = useState(0);
 
   let navigate = useNavigate();
+  useEffect(() => {
+    if (langIndex === 0 || langIndex === 1)
+      document.querySelector("html").dir = "ltr";
+    else if (langIndex === 2) document.querySelector("html").dir = "rtl";
+  }, [langIndex]);
 
   const toggleSettingsDrawer = (open) => {
     setSettingsDrawer({ right: open });
