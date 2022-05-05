@@ -5,7 +5,7 @@ import GoHomeButton from "../Components/Buttons/GoHomeButton";
 const ErrorPage = () => {
   return (
     <section className="error">
-      <section className="container">
+      <section className="container df fd-c ai-c jc-c">
         <Typography component="h1" variant="h1" color="text.primary">
           An Error Has Occured
         </Typography>
