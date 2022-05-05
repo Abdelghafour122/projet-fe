@@ -1,7 +1,13 @@
-import { Typography } from "@mui/material";
+import { Typography, Stepper, Step, StepLabel } from "@mui/material";
 import React from "react";
 
 const AppointmentPage = () => {
+  const steps = [
+    "Enter your information",
+    "Choose Date and Time",
+    "Choose a Doctor",
+  ];
+
   return (
     <section className="appointment">
       <section className="container">

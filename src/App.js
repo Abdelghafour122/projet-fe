@@ -14,6 +14,7 @@ import ContactusPage from "./Routes/ContactusPage";
 import NewsletterPage from "./Routes/NewsletterPage";
 import AppointmentPage from "./Routes/AppointmentPage";
 import SymptomsPage from "./Routes/SymptomsPage";
+import ErrorPage from "./Routes/ErrorPage";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -49,6 +50,7 @@ function App() {
           <Route path="/newsletter" element={<NewsletterPage />} />
           <Route path="/appointment" element={<AppointmentPage />} />
           <Route path="/symptoms" element={<SymptomsPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />
       </Box>

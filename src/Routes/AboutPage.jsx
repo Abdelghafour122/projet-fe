@@ -2,6 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { Favorite } from "@mui/icons-material";
+import { useInView } from "react-intersection-observer";
 import background4 from "../Assets/Pictures/background4.jpg";
 import scientist from "../Assets/Pictures/scientist.png";
 import copd from "../Assets/Pictures/COPD.png";
