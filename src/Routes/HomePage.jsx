@@ -186,7 +186,6 @@ const HomePage = () => {
           <Typography component="h1" variant="h1" color="text.primary">
             See Our Impressions
           </Typography>
-
           <Grid
             container
             spacing={{ xs: 2, sm: 3, md: 5 }}

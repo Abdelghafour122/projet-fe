@@ -317,8 +317,8 @@ nav .MuiTabs-indicator {
 }
 
 .landingpage .about-us {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .landingpage .about-us h1 {
@@ -443,8 +443,8 @@ nav .MuiTabs-indicator {
 }
 
 .landingpage .impressions {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .landingpage .impressions h1 {
@@ -690,7 +690,7 @@ footer .container .socials * {
 }
 
 .about .doctors {
-  margin: 150px 0;
+  margin: 200px 0;
 }
 
 @media (max-width: 47.9375rem) {
@@ -738,7 +738,7 @@ footer .container .socials * {
 }
 
 .about .science {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 
 @media (max-width: 47.9375rem) {
