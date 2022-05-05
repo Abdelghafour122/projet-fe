@@ -101,7 +101,6 @@ const HomePage = () => {
           <Typography component="h3" variant="h3" color="text.primary">
             Everyday or life-changing care. We're here when you need us.
           </Typography>
-
           <Typography
             component="p"
             variant="p"
@@ -195,7 +194,13 @@ const HomePage = () => {
           >
             <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
               <Card component="div" className="df fd-c ai-c">
-                <Rating name="read-only" value={4} readOnly size="large" />
+                <Rating
+                  name="read-only"
+                  value={4.5}
+                  precision={0.5}
+                  readOnly
+                  size="large"
+                />
                 <Typography component="p" variant="p" color="text.secondary">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quisquam veritatis nam optio quod eveniet doloremque
@@ -210,7 +215,6 @@ const HomePage = () => {
                 </Card>
               </Card>
             </Grid>
-
             <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
               <Card component="div" className="df fd-c ai-c">
                 <Rating name="read-only" value={4} readOnly size="large" />
@@ -228,7 +232,6 @@ const HomePage = () => {
                 </Card>
               </Card>
             </Grid>
-
             <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
               <Card component="div" className="df fd-c ai-c">
                 <Rating name="read-only" value={4} readOnly size="large" />
@@ -246,10 +249,15 @@ const HomePage = () => {
                 </Card>
               </Card>
             </Grid>
-
             <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
               <Card component="div" className="df fd-c ai-c">
-                <Rating name="read-only" value={4} readOnly size="large" />
+                <Rating
+                  name="read-only"
+                  value={3.5}
+                  precision={0.5}
+                  readOnly
+                  size="large"
+                />
                 <Typography component="p" variant="p" color="text.secondary">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quisquam veritatis nam optio quod eveniet doloremque
