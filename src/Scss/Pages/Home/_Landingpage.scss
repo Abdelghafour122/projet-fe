@@ -59,7 +59,37 @@
         font-size: 54px;
       }
     }
+    & h3 {
+      text-align: center;
+      @include breakpoint-down(large) {
+        font-size: 35px;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 30px;
+      }
+    }
+    & p.sub-h3 {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      max-width: 70%;
+      @include breakpoint-down(medium) {
+        font-size: 17px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 15px;
+      }
+    }
+
+    & .MuiGrid-container {
+      justify-content: center;
+    }
     & .MuiGrid-item {
+      @include breakpoint-down(small) {
+        &:not(:last-of-type) {
+          margin-bottom: 25px;
+        }
+      }
       & .info {
         & img {
           height: 150px;
@@ -73,11 +103,12 @@
         }
         & h4 {
           text-align: center;
+          font-size: 1.8rem;
           @include breakpoint-down(large) {
-            font-size: 30px;
+            font-size: 1.6rem;
           }
           @include breakpoint-down(medium) {
-            font-size: 25px;
+            font-size: 1.4rem;
           }
         }
         & p {
@@ -91,6 +122,9 @@
             padding: 0 20px;
           }
         }
+      }
+      & button {
+        margin-top: 20px;
       }
     }
   }

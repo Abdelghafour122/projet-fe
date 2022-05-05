@@ -339,6 +339,53 @@ nav .MuiTabs-indicator {
   }
 }
 
+.landingpage .about-us h3 {
+  text-align: center;
+}
+
+@media (max-width: 61.9375rem) {
+  .landingpage .about-us h3 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .landingpage .about-us h3 {
+    font-size: 30px;
+  }
+}
+
+.landingpage .about-us p.sub-h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 70%;
+}
+
+@media (max-width: 47.9375rem) {
+  .landingpage .about-us p.sub-h3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .landingpage .about-us p.sub-h3 {
+    font-size: 15px;
+  }
+}
+
+.landingpage .about-us .MuiGrid-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 35.9375rem) {
+  .landingpage .about-us .MuiGrid-item:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}
+
 .landingpage .about-us .MuiGrid-item .info img {
   height: 150px;
   aspect-ratio: 1;
@@ -358,17 +405,18 @@ nav .MuiTabs-indicator {
 
 .landingpage .about-us .MuiGrid-item .info h4 {
   text-align: center;
+  font-size: 1.8rem;
 }
 
 @media (max-width: 61.9375rem) {
   .landingpage .about-us .MuiGrid-item .info h4 {
-    font-size: 30px;
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 47.9375rem) {
   .landingpage .about-us .MuiGrid-item .info h4 {
-    font-size: 25px;
+    font-size: 1.4rem;
   }
 }
 
@@ -388,6 +436,10 @@ nav .MuiTabs-indicator {
     font-size: 14px;
     padding: 0 20px;
   }
+}
+
+.landingpage .about-us .MuiGrid-item button {
+  margin-top: 20px;
 }
 
 .landingpage .impressions {

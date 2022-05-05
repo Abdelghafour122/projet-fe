@@ -14,14 +14,16 @@ import { ContentPasteSearchTwoTone, SearchTwoTone } from "@mui/icons-material";
 import vitaminsSupps from "../Assets/Pictures/vitaminsSupps.webp";
 import sleep from "../Assets/Pictures/sleep.webp";
 import nutritionYellow from "../Assets/Pictures/nutritionYellow.webp";
+import mentalHealth from "../Assets/Pictures/mentalHealth.webp";
+import fitness from "../Assets/Pictures/fitness.webp";
 
 import avatar1 from "../Assets/Pictures/avatar-ali.png";
 import avatar2 from "../Assets/Pictures/avatar-anisha.png";
 import avatar3 from "../Assets/Pictures/avatar-richard.png";
 import avatar4 from "../Assets/Pictures/avatar-shanai.png";
 
-import mentalHealth from "../Assets/Pictures/mentalHealth.webp";
 import SuccessSnackbar from "../Components/Snackbars/SuccessSnackbar";
+import LearnMoreButton from "../Components/Buttons/LearnMoreButton";
 
 const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
@@ -96,68 +98,85 @@ const HomePage = () => {
           <Typography component="h1" variant="h1" color="text.primary">
             Why Choose CLINICAL
           </Typography>
+          <Typography component="h3" variant="h3" color="text.primary">
+            Everyday or life-changing care. We're here when you need us.
+          </Typography>
+
+          <Typography
+            component="p"
+            variant="p"
+            className="sub-h3"
+            color="text.secondary"
+          >
+            Discover how you can keep your lungs healthy, and how to achieve
+            overall balance by aligning nutrition, mental and physical health.
+          </Typography>
           <Grid
             container
-            spacing={{ xs: 2, sm: 3, md: 5 }}
-            columns={{ xs: 1, sm: 4, md: 16 }}
+            spacing={{ xs: 1, sm: 2, md: 4 }}
+            columns={{ xs: 1, sm: 10, md: 21, lg: 20 }}
           >
-            <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
+            <Grid item xs={1} sm={5} md={7} lg={4} className="df fd-c ai-c">
               <div className="df fd-c ai-c info">
                 <img src={sleep} alt="Sleep" />
                 <Typography component="h4" variant="h4" color="text.primary">
                   Sleep Habits
                 </Typography>
                 <Typography component="p" variant="p" color="text.secondary">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptate ab, harum perferendis alias et veniam magni dolorum
-                  maiores aspernatur atque odio. Obcaecati veritatis non labore
-                  quaerat dolores id, illo sed.
+                  Understand how your sleep schedule is affecting your lungs.
                 </Typography>
               </div>
+              <LearnMoreButton />
             </Grid>
-
-            <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
+            <Grid item xs={1} sm={5} md={7} lg={4} className="df fd-c ai-c">
               <div className="df fd-c ai-c info">
                 <img src={vitaminsSupps} alt="Vitamins and Supplemets" />
                 <Typography component="h4" variant="h4" color="text.primary">
                   Vitamins and Supplemets
                 </Typography>
                 <Typography component="p" variant="p" color="text.secondary">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptate ab, harum perferendis alias et veniam magni dolorum
-                  maiores aspernatur atque odio. Obcaecati veritatis non labore
-                  quaerat dolores id, illo sed.
+                  Understand how these are used, benefits and side effects.
                 </Typography>
               </div>
+              <LearnMoreButton />
             </Grid>
-
-            <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
+            <Grid item xs={1} sm={5} md={7} lg={4} className="df fd-c ai-c">
               <div className="df fd-c ai-c info">
                 <img src={mentalHealth} alt="Mental Health" />
                 <Typography component="h4" variant="h4" color="text.primary">
                   Mental Health
                 </Typography>
                 <Typography component="p" variant="p" color="text.secondary">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptate ab, harum perferendis alias et veniam magni dolorum
-                  maiores aspernatur atque odio. Obcaecati veritatis non labore
-                  quaerat dolores id, illo sed.
+                  Discover how important mental health is for the overall
+                  well-being.
                 </Typography>
+                <LearnMoreButton />
               </div>
             </Grid>
-
-            <Grid item xs={1} sm={2} md={4} className="df fd-c ai-c">
+            <Grid item xs={1} sm={5} md={7} lg={4} className="df fd-c ai-c">
               <div className="df fd-c ai-c info">
                 <img src={nutritionYellow} alt="Nutrition" />
                 <Typography component="h4" variant="h4" color="text.primary">
                   Nutrition and Diet
                 </Typography>
                 <Typography component="p" variant="p" color="text.secondary">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptate ab, harum perferendis alias et veniam magni dolorum
-                  maiores aspernatur atque odio. Obcaecati veritatis non labore
-                  quaerat dolores id, illo sed.
+                  Find out the benefits of balanced diets, and it's affect on
+                  your respiratory system.
                 </Typography>
+                <LearnMoreButton />
+              </div>
+            </Grid>
+            <Grid item xs={1} sm={5} md={7} lg={4} className="df fd-c ai-c">
+              <div className="df fd-c ai-c info">
+                <img src={fitness} alt="Fitness" />
+                <Typography component="h4" variant="h4" color="text.primary">
+                  Physical Health
+                </Typography>
+                <Typography component="p" variant="p" color="text.secondary">
+                  Find out how physical health can be of great help to your
+                  lungs.
+                </Typography>
+                <LearnMoreButton />
               </div>
             </Grid>
           </Grid>
