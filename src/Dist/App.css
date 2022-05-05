@@ -17,6 +17,18 @@ body {
   padding: 5rem 0;
 }
 
+@media (max-width: 47.9375rem) {
+  .App {
+    padding: 5rem 0 8rem;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .App {
+    padding: 5rem 0 10rem;
+  }
+}
+
 .df {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -733,7 +745,7 @@ footer .container .socials * {
 
 @media (max-width: 35.9375rem) {
   .about .doctors .image img {
-    height: 250px;
+    height: 235px;
   }
 }
 
@@ -832,6 +844,35 @@ footer .container .socials * {
 @media (max-width: 35.9375rem) {
   .about .news .image img {
     height: 250px;
+  }
+}
+
+.about .attribution {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+@media (max-width: 47.9375rem) {
+  .about .attribution {
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .about .attribution {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .about .attribution p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .about .attribution p {
+    font-size: 14px;
   }
 }
 
@@ -969,5 +1010,78 @@ footer .container .socials * {
 
 .contact .info form {
   gap: 20px;
+}
+
+.symptoms {
+  margin-bottom: 200px;
+}
+
+@media (max-width: 35.9375rem) {
+  .symptoms {
+    margin-bottom: 300px;
+  }
+}
+
+.symptoms .container h1 {
+  font-size: 80px;
+  text-align: center;
+  padding-top: 70px;
+}
+
+@media (max-width: 61.9375rem) {
+  .symptoms .container h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .symptoms .container h1 {
+    font-size: 54px;
+  }
+}
+
+.symptoms .container > p {
+  font-size: 16px;
+  text-align: center;
+  margin: 30px 0;
+  max-width: 70%;
+}
+
+@media (max-width: 61.9375rem) {
+  .symptoms .container > p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .symptoms .container > p {
+    font-size: 14px;
+    padding: 0 20px;
+    max-width: unset;
+  }
+}
+
+.symptoms .container .accordion {
+  width: 100%;
+}
+
+.symptoms .container .accordion:last-of-type {
+  margin-bottom: 50px;
+}
+
+.symptoms .container .accordion p {
+  font-size: 17px;
+}
+
+@media (max-width: 47.9375rem) {
+  .symptoms .container .accordion p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .symptoms .container .accordion p {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

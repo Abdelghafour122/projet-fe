@@ -12,8 +12,8 @@ import { useNavigate } from "react-router-dom";
 const SymptomsPage = () => {
   const navigate = useNavigate();
   return (
-    <section className="appointment">
-      <section className="container">
+    <section className="symptoms">
+      <section className="container df fd-c ai-c">
         <Typography component="h1" variant="h1" color="text.primary">
           Explore the symptoms
         </Typography>
@@ -22,14 +22,14 @@ const SymptomsPage = () => {
           spread illnesses to spread more awareness, and help building a
           healthier environment
         </Typography>
-        <Accordion>
+        <Accordion className="accordion">
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography component="h4" variant="h4">
-              Item one
+            <Typography component="h5" variant="h5">
+              Covid-19
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -39,14 +39,14 @@ const SymptomsPage = () => {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion className="accordion">
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography component="h4" variant="h4">
-              Item two
+            <Typography component="h5" variant="h5">
+              Influenza
             </Typography>
           </AccordionSummary>
           <AccordionDetails>

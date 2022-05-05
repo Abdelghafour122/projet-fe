@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { Favorite } from "@mui/icons-material";
 import background4 from "../Assets/Pictures/background4.jpg";
 import scientist from "../Assets/Pictures/scientist.png";
 import copd from "../Assets/Pictures/COPD.png";
@@ -83,6 +84,19 @@ const AboutPage = () => {
             </Grid>
           </Grid>
         </section>
+        <div className="attribution df fd-c">
+          <Typography component="p" variant="subtitle1" color="text.primary">
+            Project created by: Adem Deghar, Abdelghafour Echikr, Zakaria Dacha.
+          </Typography>
+          <Typography
+            component="p"
+            variant="subtitle1"
+            color="text.primary"
+            className="df jc-c"
+          >
+            Coded with <Favorite color="error" /> by Abdelghafour Echikr.
+          </Typography>
+        </div>
       </Box>
     </section>
   );

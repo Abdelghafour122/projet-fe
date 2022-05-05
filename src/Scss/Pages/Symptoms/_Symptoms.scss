@@ -1,2 +1,49 @@
 .symptoms {
+  margin-bottom: 200px;
+  @include breakpoint-down(small) {
+    margin-bottom: 300px;
+  }
+  & .container {
+    & h1 {
+      font-size: 80px;
+      text-align: center;
+      padding-top: 70px;
+      @include breakpoint-down(large) {
+        font-size: 60px;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 54px;
+      }
+    }
+    & > p {
+      font-size: 16px;
+      text-align: center;
+      margin: 30px 0;
+      max-width: 70%;
+      @include breakpoint-down(large) {
+        font-size: 16px;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 14px;
+        padding: 0 20px;
+        max-width: unset;
+      }
+    }
+    & .accordion {
+      width: 100%;
+      &:last-of-type {
+        margin-bottom: 50px;
+      }
+
+      & p {
+        font-size: 17px;
+        @include breakpoint-down(medium) {
+          font-size: 16px;
+        }
+        @include breakpoint-down(small) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }

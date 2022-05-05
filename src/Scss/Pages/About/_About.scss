@@ -57,7 +57,7 @@
         height: 300px;
         border-radius: 7px;
         @include breakpoint-down(small) {
-          height: 250px;
+          height: 235px;
         }
       }
     }
@@ -124,6 +124,24 @@
         @include breakpoint-down(small) {
           height: 250px;
         }
+      }
+    }
+  }
+  & .attribution {
+    margin-bottom: 70px;
+    text-align: center;
+    @include breakpoint-down(medium) {
+      margin-bottom: 120px;
+    }
+    @include breakpoint-down(small) {
+      margin-bottom: 150px;
+    }
+    & p {
+      @include breakpoint-down(medium) {
+        font-size: 16px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 14px;
       }
     }
   }

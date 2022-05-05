@@ -14,6 +14,12 @@ body {
 
 .App {
   padding: 5rem 0;
+  @include breakpoint-down(medium) {
+    padding: 5rem 0 8rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 5rem 0 10rem;
+  }
 }
 
 .df {
