@@ -2,23 +2,32 @@ import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { Favorite } from "@mui/icons-material";
-import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
+
 import background4 from "../Assets/Pictures/background4.jpg";
 import scientist from "../Assets/Pictures/scientist.png";
 import copd from "../Assets/Pictures/COPD.png";
 
 const AboutPage = () => {
+  const { t } = useTranslation();
   return (
     <section className="about">
       <Box component="section" className="container">
         <section className="heading df fd-c ai-c ">
-          <Typography component="h1" variant="h1" color="text.primary">
+          {/* <Typography component="h1" variant="h1" color="text.primary">
             About CLINICAL
           </Typography>
           <Typography component="p" variant="p" color="text.secondary">
             Our medical center specializes in pneumology, chest and the
             respiratory system's health, we integrate clinical and hospital care
             with research and education.
+          </Typography> */}
+
+          <Typography component="h1" variant="h1" color="text.primary">
+            {t("About_page.Main_heading.head")}
+          </Typography>
+          <Typography component="p" variant="p" color="text.secondary">
+            {t("About_page.Main_heading.p")}
           </Typography>
         </section>
         <section className="doctors">

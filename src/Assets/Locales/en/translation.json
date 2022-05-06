@@ -1,4 +1,8 @@
 {
-  "welcome_to_react": "Welcome to React and react-i18next",
-  "you": "hellp"
+  "About_page": {
+    "Main_heading": {
+      "head": "About CLINICAL",
+      "p": "Our medical center specializes in pneumology, chest and the respiratory system's health, we integrate clinical and hospital care with research and education."
+    }
+  }
 }

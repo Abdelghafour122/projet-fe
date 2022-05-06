@@ -1,4 +1,8 @@
 {
-  "welcome_to_react": "Bienvenu a React et react-i18next",
-  "you": "hellpent"
+  "About_page": {
+    "Main_heading": {
+      "head": "À propos de CLINICAL",
+      "p": "Notre centre médical est spécialisé dans la pneumologie, la santé pulmonaire et respiratoire, nous intégrons les soins cliniques et hospitaliers à la recherche et à l'éducation."
+    }
+  }
 }
