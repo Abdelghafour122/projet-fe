@@ -1038,6 +1038,19 @@ footer .container .socials * {
 
 .appointment form {
   gap: 20px;
+  width: 500px;
+}
+
+@media (max-width: 47.9375rem) {
+  .appointment form {
+    width: 400px;
+  }
+}
+
+@media (max-width: 35.9375rem) {
+  .appointment form {
+    width: 300px;
+  }
 }
 
 .symptoms {

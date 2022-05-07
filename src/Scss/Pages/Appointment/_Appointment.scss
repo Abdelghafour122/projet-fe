@@ -15,5 +15,12 @@
   }
   & form {
     gap: 20px;
+    width: 500px;
+    @include breakpoint-down(medium) {
+      width: 400px;
+    }
+    @include breakpoint-down(small) {
+      width: 300px;
+    }
   }
 }

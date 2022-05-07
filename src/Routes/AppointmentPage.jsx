@@ -79,11 +79,11 @@ const AppointmentPage = () => {
 
   return (
     <section className="appointment">
-      <section className="container">
+      <section className="container df fd-c ai-c">
         <Typography component="h1" variant="h1" color="text.primary">
           Take an appointment
         </Typography>
-        <form action="" className="df fd-c ai-c ">
+        <form action="" className="df fd-c ai-c">
           <TextField
             id="outlined-basic"
             label="First Name"
@@ -98,6 +98,7 @@ const AppointmentPage = () => {
               setFirstName(e.target.value);
             }}
             required
+            fullWidth
           />
           <TextField
             id="outlined-basic"
@@ -113,6 +114,7 @@ const AppointmentPage = () => {
               setLastName(e.target.value);
             }}
             required
+            fullWidth
           />
           <TextField
             id="outlined-basic"
@@ -128,6 +130,7 @@ const AppointmentPage = () => {
               setEmail(e.target.value);
             }}
             required
+            fullWidth
           />
           <TextField
             id="outlined-basic"
@@ -147,6 +150,7 @@ const AppointmentPage = () => {
               phoneNumberFocus && !validPhoneNumber && "Invalid phone number"
             }
             required
+            fullWidth
           />
           <TextField
             id="outlined-basic"
@@ -167,6 +171,7 @@ const AppointmentPage = () => {
             color={validAge ? "success" : "primary"}
             helperText={ageFocus && !validAge && "Invalid age"}
             required
+            fullWidth
           />
           <TextField
             id="outlined-basic"
@@ -197,6 +202,7 @@ const AppointmentPage = () => {
               !validAge
               // !validDate
             }
+            fullWidth
           >
             Book now
           </Button>
