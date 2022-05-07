@@ -1,8 +1,21 @@
 {
+  "App_title": "CLINICAL: Traitement médical et informations sur la santé dignes de confiance",
   "About_page": {
     "Main_heading": {
       "head": "À propos de CLINICAL",
       "p": "Notre centre médical est spécialisé dans la pneumologie, la santé pulmonaire et respiratoire, nous intégrons les soins cliniques et hospitaliers à la recherche et à l'éducation."
+    },
+    "Team": {
+      "title": "Notre Equipe",
+      "p": "Notre équipe de médecins spécialistes réputés fournira le meilleur traitement médical possible, en utilisant les dernières technologies et les méthodes de soins de santé les plus sophistiquées."
+    },
+    "Treatments": {
+      "title": "Nos Traitements",
+      "p": "Chez CLINICAL, nous veillons à ce que nos patients reçoivent le meilleur traitement médical, en utilisant les technologies les plus avancées et la médecine moderne."
+    },
+    "Newsletters": {
+      "title": "Nos Bulletins",
+      "p": "Nous avons décidé de créer des bulletins d'information afin d'informer non seulement nos patients, mais tous ceux qui se soucient de leurs poumons et de la santé globale de leur système respiratoire."
     }
   }
 }

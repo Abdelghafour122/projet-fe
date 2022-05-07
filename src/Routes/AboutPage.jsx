@@ -38,13 +38,19 @@ const AboutPage = () => {
           >
             <Grid item md={1} className="text df fd-c ai-fs jc-c">
               <Typography component="h2" variant="h2" color="text.primary">
+                {t("About_page.Team.title")}
+              </Typography>
+              <Typography component="p" variant="p" color="text.secondary">
+                {t("About_page.Team.p")}
+              </Typography>
+              {/* <Typography component="h2" variant="h2" color="text.primary">
                 Our Team
               </Typography>
               <Typography component="p" variant="p" color="text.secondary">
                 Our team of renouned medical specialists will provide the best
                 possible medical treatment, using the latest technology and the
                 most sophisticated healthcare methods.
-              </Typography>
+              </Typography> */}
             </Grid>
             <Grid item md={1} className="image">
               <img src={background4} alt="Doctor" />
@@ -63,12 +69,10 @@ const AboutPage = () => {
             </Grid>
             <Grid item md={1} className="text df fd-c ai-fs jc-c">
               <Typography component="h2" variant="h2" color="text.primary">
-                Our Treatments
+                {t("About_page.Treatments.title")}
               </Typography>
               <Typography component="p" variant="p" color="text.secondary">
-                In CLINICAL, we make sure our patients recieve the best medical
-                treatment, using the most advanced technologies and modern
-                medecine.
+                {t("About_page.Treatments.p")}
               </Typography>
             </Grid>
           </Grid>
@@ -81,12 +85,10 @@ const AboutPage = () => {
           >
             <Grid item md={1} className="text df fd-c ai-fs jc-c">
               <Typography component="h2" variant="h2" color="text.primary">
-                Our Newsletters
+                {t("About_page.Newsletters.title")}
               </Typography>
               <Typography component="p" variant="p" color="text.secondary">
-                We decided to make newsletters so we can inform not just our
-                patients, but everyone who cares about their lungs and their
-                overall respiratory system's health.
+                {t("About_page.Newsletters.p")}
               </Typography>
             </Grid>
             <Grid item md={1} className="image df fd-c ai-fs jc-c">

@@ -1,8 +1,21 @@
 {
+  "App_title": "CLINICAL: Medical treatment and health information you can trust",
   "About_page": {
     "Main_heading": {
       "head": "About CLINICAL",
       "p": "Our medical center specializes in pneumology, chest and the respiratory system's health, we integrate clinical and hospital care with research and education."
+    },
+    "Team": {
+      "title": "Our Team",
+      "p": "Our team of renouned medical specialists will provide the best possible medical treatment, using the latest technology and the most sophisticated healthcare methods."
+    },
+    "Treatments": {
+      "title": "Our Treatments",
+      "p": "In CLINICAL, we make sure our patients recieve the best medical treatment, using the most advanced technologies and modern medecine."
+    },
+    "Newsletters": {
+      "title": "Our Newsletters",
+      "p": "We decided to make newsletters so we can inform not just our patients, but everyone who cares about their lungs and their overall respiratory system's health."
     }
   }
 }
